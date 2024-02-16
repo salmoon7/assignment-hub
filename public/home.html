@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Project Hub</title>
+   
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <img src="logo.png" width="100px" height="100px" />
+        <h2>Student Project Hub</h2>
+        <ul id="nav-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#details-container">Assignment Details</a></li>
+          <li><a href="#submission-form-container">Submission Form</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </nav>
+      <div class="home-container">
+        <div class="text-side">
+          <h1>Welcome to Your Assignment Submission Portal!</h1>
+          <br /><br />
+          <p>
+            Welcome to your Assignment Submission Portal! This is where you'll
+            be able to submit your assignments online from the comfort of your
+            home. No more worries about printing or physical submissions!
+          </p>
+          <br />
+          <p>
+            This portal has been designed to make your assignment submission
+            process smooth and hassle-free. Simply follow the instructions
+            provided, upload your completed assignments, and you're all set.
+            It's as easy as that!
+          </p>
+          <br />
+        </div>
+        <div class="side-image">
+          <img src="typing.png" class="side-img" />
+        </div>
+      </div>
+      <header>Assignment Details</header>
+
+      <div id="details-container">
+        <div class="detail-box">
+          <h2>Objective</h2>
+          <p>
+            Create a basic Edutech app using HTML and CSS to showcase your
+            understanding of web development principles.☺☺😚
+          </p>
+        </div>
+
+        <div class="detail-box">
+          <h2>Features to Include</h2>
+          <h3>Homepage:</h3>
+          <ul>
+            <li>Introduction to the Edutech app.</li>
+            <li>Navigation menu for easy access to different sections.</li>
+            <li>Brief overview of the app's functionality.</li>
+          </ul>
+          <h3>HTML Tags to Use</h3>
+          <ul>
+            <li>&lt;header&gt; for the header section.</li>
+            <li>&lt;nav&gt; for the navigation menu.</li>
+            <li>&lt;section&gt; for the main content area.</li>
+            <li>&lt;footer&gt; for the footer section.</li>
+          </ul>
+          <h3>CSS Styling</h3>
+          <ul>
+            <li>
+              Style the header, navigation menu, and footer to make them
+              visually appealing.
+            </li>
+            <li>
+              Use CSS to create a responsive layout that adapts to different
+              screen sizes.
+            </li>
+          </ul>
+          <h3>Courses Section</h3>
+          <ul>
+            <li>
+              Display a list of available courses with brief descriptions.
+            </li>
+            <li>Include thumbnails or icons for each course.</li>
+          </ul>
+          <h3>HTML Tags to Use</h3>
+          <ul>
+            <li>&lt;ul&gt; and &lt;li&gt; for the list of courses.</li>
+            <li>&lt;img&gt; for course thumbnails or icons.</li>
+          </ul>
+          <h3>CSS Styling</h3>
+          <ul>
+            <li>Style the course list to make it visually appealing.</li>
+            <li>Use CSS to align thumbnails and descriptions properly.</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h2>Course Details Page</h2>
+          <p>Provide detailed information about each course.</p>
+          <ul>
+            <li>
+              Include course title, description, instructor name, and enrollment
+              button.
+            </li>
+          </ul>
+          <h3>HTML Tags to Use</h3>
+          <ul>
+            <li>&lt;h2&gt; for the course title.</li>
+            <li>&lt;p&gt; for the course description and instructor name.</li>
+            <li>&lt;button&gt; for the enrollment button.</li>
+          </ul>
+          <h3>CSS Styling</h3>
+          <ul>
+            <li>Style the course details page to enhance readability.</li>
+            <li>Use CSS to make the enrollment button stand out.</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h2>About Us Page</h2>
+          <p>Information about the Edutech app creators or organization.</p>
+          <ul>
+            <li>Brief description of the app's mission and goals.</li>
+          </ul>
+          <h3>HTML Tags to Use</h3>
+          <ul>
+            <li>&lt;h2&gt; for the page title.</li>
+            <li>&lt;p&gt; for the content.</li>
+          </ul>
+          <h3>CSS Styling</h3>
+          <ul>
+            <li>Style the About Us page to match the app's overall design.</li>
+            <li>Use CSS to format text and add visual elements.</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h2>Additional Instructions</h2>
+          <ul>
+            <li>
+              Ensure that your HTML code is semantic and follows best practices.
+            </li>
+            <li>
+              Use external CSS stylesheets to keep your code organized and
+              maintainable.
+            </li>
+            <li>
+              Test your app on different devices and browsers to ensure
+              compatibility.
+            </li>
+            <li>
+              Consider user experience and accessibility principles while
+              designing your app.
+            </li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h2>Submission Guidelines</h2>
+          <ul>
+            <li>Submit your HTML and CSS files in a zip folder.</li>
+            <li>
+              Include a brief explanation of your design choices and any
+              challenges you encountered.
+            </li>
+            <li>DeadLine:Saturday 24th Febuary 2024.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="submission-form-container">
+        <form class="submission-form" action="#" method="post">
+          <h2 class="form-header">Drag in Your Assignment folder here.</h2>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="folder">Select Folder:</label>
+            <input type="file" id="folder" name="folder" required multiple />
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <header>Resources</header>
+      <div id="resources">
+        <div class="resource">
+          <h2>Websites for Learning Web Development</h2>
+          <p>Explore these websites to enhance your web development skills:</p>
+          <ul>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/"
+                class="resource-link"
+                target="_blank"
+                >freeCodeCamp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/"
+                class="resource-link"
+                target="_blank"
+                >W3Schools</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web"
+                class="resource-link"
+                target="_blank"
+                >MDN Web Docs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="resource">
+          <h2>Sample Images for Inspiration</h2>
+          <p>Check out these sample images to inspire your projects:</p>
+          <img src="sample2.jpg" alt="Sample Image 1" class="sample-image" />
+          <img
+            src="sampleImage.png"
+            alt="Sample Image 2"
+            class="sample-image"
+          />
+          <img src="sample3.jpg" alt="Sample Image 2" class="sample-image" />
+          <!-- Add more sample images as needed -->
+        </div>
+      </div>
+      <div id="contact">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or feedback, feel free to reach out to us:</p>
+        <ul>
+            <li>Email:taofeekabdussalam07@gmail.com</li>
+            <li>Phone: +2349093761044</li>
+            
+        </ul>
+      </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Student Project Hub. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+    <script>
+      // Define the toggleMenu function
+     // Find the navigation menu element
+     function toggleMenu() {
+    // Find the navigation menu element
+    var menu = document.getElementById('nav-menu');
+
+    // Toggle the display style of the menu using CSS class manipulation
+    if (menu.classList.contains('show-menu')) {
+        menu.classList.remove('show-menu');
+    } else {
+        menu.classList.add('show-menu');
+    }
+}
+
+// submission form
+// Add an event listener to the form submit event
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('.submission-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Collect form data
+    var formData = new FormData(form);
+
+    // Send form data to the backend using AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/submit-form'); // Replace '/submit-form' with the URL of your backend endpoint
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          // Handle successful submission
+          alert('Form submitted successfully!');
+          form.reset(); // Reset the form after successful submission
+        } else {
+          // Handle error
+          alert('An error occurred while submitting the form.');
+        }
+      }
+    };
+    xhr.send(formData);
+  });
+});
+
+       </script>
+  </body>
+
+</html>

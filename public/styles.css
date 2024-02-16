@@ -1,0 +1,479 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.main {
+  width: 100%;
+  min-height: 100vh; /* Use min-height instead of height to ensure the background color covers the entire viewport even if the content is less */
+  background: linear-gradient(90deg, #5a189a, #c77dff);
+  display: flex;
+  flex-direction: column; /* Ensure children of .main stack vertically */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Adjusted to space between items */
+  align-items: center;
+  padding: 20px; /* Added padding to provide space around the content */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  font-weight: bold;
+  font-size: 18px; /* Reduced font size slightly for better readability */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px; /* Added padding to increase clickable area and spacing between items */
+  border-radius: 8px; /* Added border-radius for rounded corners */
+  transition: background-color 0.3s ease; /* Added smooth transition effect */
+}
+
+nav ul li a:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Added hover effect to improve interactivity */
+}
+
+nav h2 {
+  font-weight: bold;
+  font-size: 24px; /* Increased font size for emphasis */
+  color: white;
+  margin-right: auto; /* Aligns the logo and heading to the left */
+}
+
+nav img {
+  opacity: 0.8;
+  margin-right: 10px; /* Added margin to separate the logo from the heading */
+}
+.text-side {
+  max-width: 500px;
+  line-height: 1.5em;
+  color: white;
+  font-size: 20px;
+}
+.home-container {
+  display: flex;
+  justify-content: space-around;
+}
+.side-img {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Define keyframes for animations */
+/* Define keyframes for animations */
+/* Define keyframes for animations */
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to elements */
+.text-side h1,
+.text-side p,
+.side-image {
+  opacity: 0; /* Hide the elements initially */
+}
+
+.text-side h1 {
+  animation: fadeInFromBottom 1s ease-out forwards;
+  animation-delay: 0.5s; /* Delay for the h1 */
+}
+
+.text-side p {
+  animation: fadeInFromBottom 1s ease-out forwards;
+  animation-delay: 1.5s; /* Delay for the paragraphs */
+}
+
+.side-image {
+  animation: fadeInFromBottom 1s ease-out forwards;
+  animation-delay: 3s; /* Delay for the image */
+}
+
+/* Styling for the header */
+/* Styling for the header */
+/* Styling for the header */
+header {
+  text-align: center; /* Center align text */
+  font-size: 36px; /* Increase font size */
+  color: white; /* Set text color to white */
+  background-color: #10002b; /* Set background color */
+  padding: 20px;
+  border-radius: 15px; /* Add padding for spacing */
+}
+
+/* Styling for the detail cards */
+/* Add your CSS styles here */
+/* Add your CSS styles here */
+/* Add your CSS styles here */
+#details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px; /* Add margin at the top */
+
+  overflow: hidden;
+}
+
+.detail-box {
+  flex-basis: calc(
+    33.33% - 20px
+  ); /* Adjust width for three boxes per column with spacing */
+  background-color: #f7f7f7; /* Set background color */
+  color: #333; /* Set text color */
+  font-size: 20px; /* Increase font size */
+  font-family: Arial, sans-serif; /* Change font family */
+  font-weight: bold; /* Make font bold */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Add border radius */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add box shadow */
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* Add margin at the bottom */
+  height: 200px; /* Set height for the detail boxes */
+  overflow: hidden; /* Hide overflow content */
+  transition: box-shadow 0.3s ease; /* Add transition effect on box-shadow */
+}
+
+.detail-box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Add box shadow on hover */
+}
+
+.detail-box h2 {
+  font-size: 24px; /* Increase font size for heading */
+  margin-bottom: 10px; /* Add margin at the bottom */
+  color: #5a5a5a; /* Change font color */
+}
+
+.detail-box p {
+  margin: 0; /* Remove default margin */
+}
+#submission-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c1647; /* Dark purple background */
+}
+
+.submission-form {
+  width: 400px;
+  padding: 20px;
+  border: 2px solid white; /* White border */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333; /* Set text color */
+}
+
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #7b2cbf; /* Purple background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #6b1d9e; /* Darker purple on hover */
+}
+
+.form-header {
+  text-align: center;
+  font-size: 24px;
+  color: #fff; /* White color */
+  margin-bottom: 20px;
+}
+
+/* Style for header elements */
+/* Style for header elements */
+header {
+  font-size: 36px;
+  font-weight: bold;
+  color: #7b2cbf; /* Purple color for headings */
+  text-align: center;
+  margin-top: 50px; /* Adjust margin as needed */
+}
+
+/* Style for the resources section */
+#resources {
+  padding: 20px;
+  background-color: #f7f7f7; /* Light gray background */
+  text-align: center;
+}
+
+/* Style for resource headings */
+.resource h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333; /* Set text color */
+  margin-bottom: 20px;
+}
+
+/* Style for resource descriptions */
+.resource p {
+  font-size: 20px;
+  color: #333; /* Set text color */
+  margin-bottom: 20px;
+}
+
+/* Style for resource links */
+.resource-link {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #7b2cbf; /* Purple color for links */
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.resource-link:hover {
+  color: #5a189a; /* Darker purple color on hover */
+}
+
+/* Style for sample images */
+.sample-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* Style for the footer */
+footer {
+  background-color: #7b2cbf; /* Purple background color */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Style for the footer content */
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style for footer paragraphs */
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Style for footer list items */
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Style for footer links */
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+  text-decoration: underline;
+}
+/* Style for the contact section */
+#contact {
+  background-color: #f9f9f9; /* Light gray background color */
+  padding: 50px 0; /* Adjust padding as needed */
+  text-align: center;
+}
+
+/* Style for the contact header */
+#contact h3 {
+  font-size: 36px;
+  color: #7b2cbf; /* Purple color for the header */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the contact information */
+#contact p {
+  font-size: 18px;
+  color: #333; /* Dark gray color for the text */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the contact details */
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact ul li {
+  font-size: 18px;
+  color: #555; /* Medium gray color for the text */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+/* For phones */
+@media (max-width: 600px) {
+  /* Adjust nav layout for smaller screens */
+
+  .home-container {
+    flex-direction: column-reverse;
+  }
+  .side-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .text-side {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .detail-box {
+    width: 100%;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  nav ul {
+    display: none; /* Hide the navigation menu by default */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #5a189a; /* Background color for the menu */
+    padding: 10px 0;
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 0;
+    transition: all 0.3s ease;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #7b2cbf; /* Dark purple background color */
+    padding: 5px 10px; /* Add padding for better click area */
+    border-radius: 5px; /* Add border radius for rounded corners */ /* Add margin to separate from other elements */
+  }
+  nav img {
+    width: 80px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  h2 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    /* Add margin to separate from other elements */
+  }
+  .home-container {
+    flex-direction: column;
+    align-items: center; /* Align items in the center */
+  }
+  nav ul.show-menu {
+    display: flex;
+  }
+  h1 {
+    position: relative; /* Set the position to relative */
+    z-index: 2; /* Set a higher z-index value */
+  }
+}
+
+/* CSS for large screens */
+@media (min-width: 601px) {
+  nav ul {
+    display: flex;
+    background-color: transparent;
+    position: static;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Additional styles */
+.menu-open {
+  display: flex;
+}
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust nav layout for tablets */
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    flex-basis: 50%;
+  }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1025px) {
+  /* Add your desktop-specific styles here */
+}
+@media (max-width: 768px) {
+  /* Adjust detail boxes layout for smaller screens */
+  #details-container {
+    flex-direction: column; /* Stack detail boxes vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .detail-box {
+    flex-basis: calc(100% - 40px); /* Full width with spacing */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px;
+    font-size: 20px; /* Add bottom margin */
+  }
+}

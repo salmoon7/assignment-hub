@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Student Project Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Add your CSS styling here */
+      body {
+        background: linear-gradient(90deg, #5a189a, #c77dff);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .main {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .login-container {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-container img {
+        margin-bottom: 20px;
+      }
+
+      .login-container h2 {
+        color: #5a189a;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5a189a;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #330066;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="login-container">
+        <img src="logo.png" width="100px" height="100px" />
+        <h2>Login to Student Project Hub</h2>
+        <form action="#" method="post" id="login-form">
+          <div class="form-group">
+            <label for="matric-number">UserName:</label>
+            <input
+              type="text"
+              id="matric-number"
+              name="matric-number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Login" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      // script.js
+
+      const students = [
+        { matricNumber: "almadinah", name: "Student 1", password: "password" },
+        { matricNumber: "almadinah", name: "Student 2", password: "password" },
+        // Add more students as needed
+      ];
+
+      document
+        .getElementById("login-form") // Update this to match your form ID
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const matricNumber = document.getElementById("matric-number").value;
+          const password = document.getElementById("password").value;
+
+          const user = students.find(
+            (student) =>
+              student.matricNumber === matricNumber &&
+              student.password === password
+          );
+
+          if (user) {
+            // Store user session
+            sessionStorage.setItem("currentUser", JSON.stringify(user));
+            // Redirect to dashboard or display user name
+            window.location.href = "home.html"; // Corrected the URL
+          } else {
+            alert("Invalid matric number or password");
+          }
+        });
+    </script>
+  </body>
+</html>
